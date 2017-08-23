@@ -1,6 +1,6 @@
 <?php
-include '/storage/ssd2/679/2427679/public_html/init.php';
-include '/storage/ssd2/679/2427679/public_html/user.php';
+include 'init.php';
+include 'user.php';
 if(isset($_GET['message']) == 1)
     {   echo "Username already selected. Try another. ";
         $_GET['message']=0; 
