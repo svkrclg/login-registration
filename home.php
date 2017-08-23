@@ -7,11 +7,11 @@ include 'init.php';
 	 if(isset($_GET['msg']))
 
 	  {
-	   $conn = new mysqli('localhost', 'id2427679_svkrclg', 'happyacct', 'id2427679_user_list');
+	   $conn = new mysqli('your_host', 'username', 'password', 'databasename');
 
 	   $msg=$_SESSION['user_id'];
 
-       $sql = "SELECT *  FROM user WHERE `user_id`= $msg";
+       $sql = "SELECT *  FROM tablename WHERE `user_id`= $msg";
 
        $result = $conn->query($sql);
 
@@ -27,20 +27,13 @@ include 'init.php';
 
 			  echo $row["firstname"]. ', Please verify your Email-id. we have sent a link';
 
-                          mail($row['email'] ,"Verify the email. Click on the URL", "https://happyacct.000webhostapp.com/register/email_activate.php?usrn=".$row['username'] ."&email_code=".$row['email_code'] , "From:" . $admin_email);
+                          mail($row['email'] ,"Verify the email. Click on the URL", "https://127.0.0.1/email_activate.php?usrn=".$row['username'] ."&email_code=".$row['email_code'] , "From:" . $admin_email);
 
                            ?>
 
 			  <body>
 
 			  <a href="logout.php">LOG OUT</a>
-
-<div id="nav">
-			<ul>
-
-				<li><a href="https://www.onlineexambuilder.com/phase-1/exam-171526">CLICK TO START EXAM</a></li>
-			</ul>	
-		</div>
 			  </body>
 
 			 <?php
