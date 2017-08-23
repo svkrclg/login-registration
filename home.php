@@ -23,7 +23,7 @@ include 'init.php';
           if($row["email_state"]==0)
 
 		  {
-                          $admin_email="svkrclg@gmail.com";
+                          $admin_email="your_email_id";
 
 			  echo $row["firstname"]. ', Please verify your Email-id. we have sent a link';
 
